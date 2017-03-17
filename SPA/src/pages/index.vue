@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <!-- 头部 -->
-    <router-view></router-view>
+    <!-- <router-view></router-view> -->
+    <Headr></Headr>
 
     <!-- 产品list -->
     <h6 class='ui-txt-info'>年轻玩法，最in假期</h6>
@@ -22,8 +23,8 @@
 </template>
 
 <script>
-import Headr from './components/Header'
-import List from './components/List'
+import Headr from '../components/Header'
+import List from '../components/List'
 export default {
   data(){
     return {

@@ -1,21 +1,20 @@
-# spa
+# SPA单页面
 
-> A Vue.js project
+```
+全局装vue-cli，它是vue的一个脚手架
+npm i -g vue-cli
 
-## Build Setup
+安装依赖
+npm i
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
+浏览器跑起来
 npm run dev
 
 # build for production with minification
 npm run build
 
+
 # build for production and view the bundle analyzer report
 npm run build --report
-```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+```

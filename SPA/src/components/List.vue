@@ -1,7 +1,7 @@
 <template>
   <li class="llh-classical-banner" :data-pId="ProductId">
     <router-link to="/detail">
-      <span class="lazy" v-bind:style="{backgroundImage:'url('+thumb+')'}"></span>
+      <span class="lazy" :style="{backgroundImage:'url('+thumb+')'}"></span>
       <div class="ui-badge">{{label}}</div>
       <div class="llh-classical-banner-title">
           <h3>{{prodName}}</h3>
@@ -12,9 +12,6 @@
 </template>
 
 <script>
-
-
-
 export default {
   props: ['ProductId', 'thumb', 'label','prodName', 'referDate', 'minPrice']
 }
@@ -23,15 +20,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-
 .llh-classical-wrap .llh-classical-banner a{
     position: relative;
     display: block;
     padding-top: 42.67%;
     margin-bottom: 10px
 }
-
-
 
 .llh-classical-wrap .llh-classical-banner a>span {
     height: 100%;
