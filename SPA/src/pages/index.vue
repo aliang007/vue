@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <!-- 头部 -->
-    <!-- <router-view></router-view> -->
-    <Headr></Headr>
+    <router-view></router-view>
 
     <!-- 产品list -->
     <h6 class='ui-txt-info'>年轻玩法，最in假期</h6>
