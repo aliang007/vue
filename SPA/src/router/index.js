@@ -6,15 +6,14 @@ import Detail from '@/pages/Detail'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'Hello',
       component: Hello
     },
     {
-      path: '/detail',
-      name: 'detail',
+      path: '/detail/:color',
       component:  Detail
     }
 

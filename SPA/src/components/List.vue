@@ -1,6 +1,7 @@
 <template>
   <li class="llh-classical-banner" :data-pId="ProductId">
-    <router-link to="/detail">
+    <router-link :to="{path: 'detail'}">
+    <!-- <router-link to="/detail"> -->
       <span class="lazy" :style="{backgroundImage:'url('+thumb+')'}"></span>
       <div class="ui-badge">{{label}}</div>
       <div class="llh-classical-banner-title">

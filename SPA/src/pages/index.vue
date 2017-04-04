@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <!-- 头部 -->
-    <router-view></router-view>
+    <!-- <router-view></router-view> -->
 
     <!-- 产品list -->
     <h6 class='ui-txt-info'>年轻玩法，最in假期</h6>
     <div class="llh-classical-wrap">
       <ul class="ui-list">
         <List
-          v-for="item in product"
+          v-for="item in product" :key="item.prodCode"
           :prodCode="item.prodCode"
           :prodName="item.prodName"
           :thumb="item.thumb"

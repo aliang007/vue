@@ -2,5 +2,5 @@
 
       |-- SPA                    单页面
       |-- Cart                   购物车页面
-      |-- underfined
+      |-- shop                   电商系统
 
