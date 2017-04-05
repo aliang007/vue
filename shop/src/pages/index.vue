@@ -48,22 +48,16 @@
   export default{
     created(){
 
-      this.axios.get('/user?ID=12345')
-        .then(function (response) {
-          console.log(response);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-
-
-      console.log(this.$http.get('sssss',{aaaa:111}))
-      this.$http.post('getList', {userId: 123} )
-      .then( (data)=>{
-        console.log(123)
-      }, (err)=>{
-        console.log(456)
+      this.axios.get('/api/getNewsList')
+      .then( (res) => {
+        console.log(res)
+        this.newsList = res.data
       })
+      .then( (error) => {
+        console.log(error);
+      });
+
+
     },
     data(){
       return {
@@ -98,23 +92,23 @@
           }
         ],
         newsList: [
-          {
-            title: '数据统计2233',
-            url: 'http://www.aliang.me',
-          },
-          {
-            title: '数据预测2233',
-            url: 'http://www.aliang.me',
-          },
-          {
-            title: '流量分析2233',
-            url: 'http://www.aliang.me',
-            hot: true
-          },
-          {
-            title: '广告发布2233',
-            url: 'http://www.aliang.me',
-          }
+          // {
+          //   title: '数据统计2233',
+          //   url: 'http://www.aliang.me',
+          // },
+          // {
+          //   title: '数据预测2233',
+          //   url: 'http://www.aliang.me',
+          // },
+          // {
+          //   title: '流量分析2233',
+          //   url: 'http://www.aliang.me',
+          //   hot: true
+          // },
+          // {
+          //   title: '广告发布2233',
+          //   url: 'http://www.aliang.me',
+          // }
         ],
         productList: {
           pc: {
