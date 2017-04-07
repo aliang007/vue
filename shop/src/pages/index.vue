@@ -25,7 +25,7 @@
       </div>
     </div>
     <div class="index-right">
-      <slider :sliders="sliders" :inv="invTime"></slider>
+      <slider :sliders="sliders" :inv="sliderSpeed"></slider>
       <div class="index-board-list">
         <div
         class="index-board-item"
@@ -51,7 +51,6 @@
       slider
     },
     created(){
-
       this.axios.get('/api/getNewsList')
       .then( (res) => {
         console.log(res)
@@ -65,6 +64,7 @@
     },
     data(){
       return {
+        sliderSpeed: 1000,
         sliders: [
           {
             src: require('../assets/slideShow/pic1.jpg'),
@@ -117,25 +117,7 @@
             saleout: false
           }
         ],
-        newsList: [
-          // {
-          //   title: '数据统计2233',
-          //   url: 'http://www.aliang.me',
-          // },
-          // {
-          //   title: '数据预测2233',
-          //   url: 'http://www.aliang.me',
-          // },
-          // {
-          //   title: '流量分析2233',
-          //   url: 'http://www.aliang.me',
-          //   hot: true
-          // },
-          // {
-          //   title: '广告发布2233',
-          //   url: 'http://www.aliang.me',
-          // }
-        ],
+        newsList: [],
         productList: {
           pc: {
             title: 'pc产品',

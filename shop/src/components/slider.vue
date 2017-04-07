@@ -27,7 +27,7 @@ export default {
     sliders: [],
     inv: {
       type: Number,
-      default: 1000
+      default: 500
     }
   },
   data () {
@@ -55,9 +55,24 @@ export default {
   },
   methods: {
     goto(index){
-      this.nowIndex = index;
+        this.nowIndex = index;
+        setTimeout(()=>{
+          this.isShow = true;
+          this.nowIndex = index;
+        },10)
+    },
+    runInv(){
+      this.invId =  setInterval( ()=>{
+        this.goto(this.nextIndex)
+      },this.inv)
+    },
+    clearInv(){
+        clearInterval(this.invId)
     }
 
+  },
+  mounted(){
+    this.runInv()
   }
 }
 </script>
