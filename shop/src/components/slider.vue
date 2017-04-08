@@ -24,7 +24,10 @@
 <script>
 export default {
   props: {
-    sliders: [],
+    sliders: {
+      type: Array,
+      default: ''
+    },
     inv: {
       type: Number,
       default: 500
@@ -55,11 +58,12 @@ export default {
   },
   methods: {
     goto(index){
+        this.isShow = false;
         this.nowIndex = index;
         setTimeout(()=>{
           this.isShow = true;
           this.nowIndex = index;
-        },10)
+        },60)
     },
     runInv(){
       this.invId =  setInterval( ()=>{

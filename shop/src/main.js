@@ -21,9 +21,7 @@ let router = new VueRouter({
 	]
 })
 
-
-
-new Vue({
+var vm = new Vue({
   el: '#app',
   router,
   template: '<Layout/>',

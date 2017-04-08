@@ -12,7 +12,7 @@
             <!-- <li> {{ username }}</li>
             <li v-if="username!== ''" class="nav-pile">|</li>
             <li v-if="username!== ''" @click="quit">退出</li> -->
-            <li @click="logClick">登录</li>
+            <li @click="loginClick" click="logClick">登录</li>
             <li class="nav-pile">|</li>
             <li @click="regClick">注册</li>
             <li class="nav-pile">|</li>
@@ -33,15 +33,46 @@
     <div class="app-foot">
       <p>© 2017 aliang MIT</p>
     </div>
+
+    <!-- 弹窗 -->
+    <mydialog :is-show='isShowAboutDialog' @on-close="closeDialog('isShowAboutDialog')">
+      <p>hello 关于我们</p>
+    </mydialog>
+    <mydialog :is-show='isShowLoginDialog' @on-close="closeDialog('isShowLoginDialog')">
+      <p>hello 登陆</p>
+    </mydialog>
+    <mydialog :is-show='isShowRegDialog' @on-close="closeDialog('isShowRegDialog')">
+      <p>hello 注册</p>
+    </mydialog>
   </div>
 </template>
 
 <script>
+import Mydialog from './dialog'
 export default {
   data () {
-
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      isShowAboutDialog: false,
+      isShowLoginDialog: false,
+      isShowRegDialog: false,
+    }
+  },
+  components:{
+    Mydialog
+  },
+  methods:{
+    loginClick(){
+      this.isShowLoginDialog = true;
+    },
+    regClick(){
+      this.isShowRegDialog = true;
+    },
+    aboutClick(){
+      this.isShowAboutDialog = true;
+    },
+    closeDialog(attr){
+      this[attr] = false;
     }
   }
 }

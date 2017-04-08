@@ -53,10 +53,9 @@
     created(){
       this.axios.get('/api/getNewsList')
       .then( (res) => {
-        console.log(res)
+        // console.log(res)
         this.newsList = res.data
-      })
-      .then( (error) => {
+      }, (error) => {
         console.log(error);
       });
 
@@ -64,7 +63,7 @@
     },
     data(){
       return {
-        sliderSpeed: 1000,
+        sliderSpeed: 3000,
         sliders: [
           {
             src: require('../assets/slideShow/pic1.jpg'),
