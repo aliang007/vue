@@ -36,10 +36,10 @@
 
     <!-- 弹窗 -->
     <mydialog :is-show='isShowAboutDialog' @on-close="closeDialog('isShowAboutDialog')">
-      <p>hello 关于我们</p>
+      <p>我们是一群充满活力的青年~</p>
     </mydialog>
     <mydialog :is-show='isShowLoginDialog' @on-close="closeDialog('isShowLoginDialog')">
-      <p>hello 登陆</p>
+      <login></login>
     </mydialog>
     <mydialog :is-show='isShowRegDialog' @on-close="closeDialog('isShowRegDialog')">
       <p>hello 注册</p>
@@ -49,6 +49,7 @@
 
 <script>
 import Mydialog from './dialog'
+import login from './login'
 export default {
   data () {
     return {
@@ -59,7 +60,8 @@ export default {
     }
   },
   components:{
-    Mydialog
+    Mydialog,
+    login
   },
   methods:{
     loginClick(){
