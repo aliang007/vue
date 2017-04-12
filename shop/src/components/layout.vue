@@ -9,9 +9,9 @@
         </router-link>
         <div class="head-nav">
           <ul class="nav-list">
-            <!-- <li> {{ username }}</li>
+             <li> {{ username }}</li>
             <li v-if="username!== ''" class="nav-pile">|</li>
-            <li v-if="username!== ''" @click="quit">退出</li> -->
+            <li v-if="username!== ''" @click="quit">退出</li>
             <li @click="loginClick" click="logClick">登录</li>
             <li class="nav-pile">|</li>
             <li @click="regClick">注册</li>
@@ -39,7 +39,7 @@
       <p>我们是一群充满活力的青年~</p>
     </mydialog>
     <mydialog :is-show='isShowLoginDialog' @on-close="closeDialog('isShowLoginDialog')">
-      <login></login>
+      <login @has-log="onSuccessLogin"></login>
     </mydialog>
     <mydialog :is-show='isShowRegDialog' @on-close="closeDialog('isShowRegDialog')">
       <p>hello 注册</p>
@@ -57,6 +57,7 @@ export default {
       isShowAboutDialog: false,
       isShowLoginDialog: false,
       isShowRegDialog: false,
+      username: ''
     }
   },
   components:{
@@ -74,7 +75,16 @@ export default {
       this.isShowAboutDialog = true;
     },
     closeDialog(attr){
+      console.log(this[attr])
       this[attr] = false;
+    },
+    onSuccessLogin(data){
+      console.log(data,'layout')
+      this.username = data.username
+      this.closeDialog('isShowLoginDialog')
+    },
+    quit(){
+      this.username = ''
     }
   }
 }
