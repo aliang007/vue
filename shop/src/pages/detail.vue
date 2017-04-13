@@ -2,7 +2,7 @@
   <div class="detail-wrap">
     <div class="detail-left">
       <div class="product-board">
-        <img src="../assets/images/1.png">
+        <img :src="productIco">
         <ul>
           <router-link v-for="item in products" :to="{ path: item.path }" tag="li" active-class="active">
             {{ item.name }}
@@ -21,6 +21,7 @@
 <script>
 export default {
   data () {
+
     return {
       products: [
         {
@@ -51,6 +52,11 @@ export default {
         '/detail/analysis': require("../assets/images/3.png"),
         '/detail/publish': require("../assets/images/4.png")
       }
+    }
+  },
+  computed: {
+    productIco(){
+      return this.imgMap[this.$route.path]
     }
   }
 }
