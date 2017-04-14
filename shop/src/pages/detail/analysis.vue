@@ -4,7 +4,51 @@
         <h2>流量分析</h2>
         <p>是指在获得网站访问量基本数据的情况下对有关数据进行统计、分析，从中发现用户访问网站的规律，并将这些规律与网络营销策略等相结合，从而发现目前网络营销活动中可能存在的问题，并为进一步修正或重新制定网络营销策略提供依据。当然这样的定义是站在网络营销管理的角度来考虑的</p>
       </div>
-
+      <div class="sales-board-form">
+          <div class="sales-board-line">
+              <div class="sales-board-line-left">
+                  购买数量：
+              </div>
+              <div class="sales-board-line-right">
+              </div>
+          </div>
+          <div class="sales-board-line">
+              <div class="sales-board-line-left">
+                  产品类型：
+              </div>
+              <div class="sales-board-line-right">
+              </div>
+          </div>
+          <div class="sales-board-line">
+              <div class="sales-board-line-left">
+                  有效时间：
+              </div>
+              <div class="sales-board-line-right">
+              </div>
+          </div>
+          <div class="sales-board-line">
+              <div class="sales-board-line-left">
+                  产品版本：
+              </div>
+              <div class="sales-board-line-right">
+              </div>
+          </div>
+          <div class="sales-board-line">
+              <div class="sales-board-line-left">
+                  总价：
+              </div>
+              <div class="sales-board-line-right">
+              </div>
+          </div>
+          <div class="sales-board-line">
+              <div class="sales-board-line-left">&nbsp;</div>
+              <div class="sales-board-line-right">
+                  <div class="button" >
+                    立即购买
+                  </div>
+              </div>
+          </div>
+      </div>
       <div class="sales-board-des">
         <h2>产品说明</h2>
         <p>网站访问统计分析报告的基础数据源于网站流量统计信息，但其价值远高于原始数据资料。专业的网站访问统计分析报告对网络营销的价值，正如专业的财务分析报告对企业经营策略的价值。</p>
@@ -31,6 +75,7 @@
 </template>
 
 <script>
+
 
 </script>
 
