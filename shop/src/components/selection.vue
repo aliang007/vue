@@ -1,12 +1,15 @@
 <template>
     <div class="selection-component">
       <div class="selection-show" @click="toggleDrop">
-        <span>{{ selections[nowIndex].label }}</span>
+        <span>123123</span>
         <div class="arrow"></div>
       </div>
       <div class="selection-list" v-if="isDrop">
         <ul>
-          <li v-for="(item, index) in selections">{{ index }}</li>
+          <!-- <li v-for="(item, index) in selections">{{ index }}</li> -->
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
         </ul>
       </div>
     </div>
@@ -14,31 +17,7 @@
 
 <script>
 export default {
-  props: {
-    selections: {
-      type: Array,
-      default: [{
-        label: 'test',
-        value: 0
-      }]
-    }
-  },
-  data () {
-    return {
-      isDrop: false,
-      nowIndex: 0
-    }
-  },
-  methods: {
-    toggleDrop () {
-      this.isDrop = !this.isDrop
-    },
-    chooseSelection (index) {
-      this.nowIndex = index
-      this.isDrop = false
-      this.$emit('on-change', this.selections[this.nowIndex])
-    }
-  }
+  
 }
 </script>
 

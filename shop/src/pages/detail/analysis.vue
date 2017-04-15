@@ -10,6 +10,7 @@
                   购买数量：
               </div>
               <div class="sales-board-line-right">
+                <!-- <v-selection></v-selection> -->
               </div>
           </div>
           <div class="sales-board-line">
@@ -17,6 +18,7 @@
                   产品类型：
               </div>
               <div class="sales-board-line-right">
+                <v-selection>asdfasfd</v-selection>
               </div>
           </div>
           <div class="sales-board-line">
@@ -75,6 +77,7 @@
 </template>
 
 <script>
+
 
 
 </script>
