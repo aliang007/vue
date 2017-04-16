@@ -6,10 +6,7 @@
       </div>
       <div class="selection-list" v-if="isDrop">
         <ul>
-          <!-- <li v-for="(item, index) in selections">{{ index }}</li> -->
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
+          <li v-for="(item, index) in selections">{{ index }}</li>
         </ul>
       </div>
     </div>
@@ -17,7 +14,11 @@
 
 <script>
 export default {
-  
+  data(){
+    return{
+      selections:['aa','bbb', 'ccc']
+    }
+  }
 }
 </script>
 

@@ -18,7 +18,7 @@
                   产品类型：
               </div>
               <div class="sales-board-line-right">
-                <v-selection>asdfasfd</v-selection>
+                <v-selection></v-selection>
               </div>
           </div>
           <div class="sales-board-line">
@@ -77,7 +77,7 @@
 </template>
 
 <script>
-
+import Vselection from '../../components/selection'
 
 
 </script>
