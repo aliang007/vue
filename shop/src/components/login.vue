@@ -78,17 +78,19 @@ export default {
   },
   methods: {
     onLogin () {
-      console.log('用户名',this.usernameModel)
-      console.log('密码',this.passwordModel)
       if (!this.userErrors.status || !this.passwordErrors.status) {
         this.errorText = '部分选项未通过'
       }
       else {
+
+        console.log('用户名',this.usernameModel)
+        console.log('密码',this.passwordModel)
+
         this.errorText = ''
-        this.$http.get('api/login')
+        this.$http.get('/api/login')
         .then((res) => {
           this.$emit('has-log', res.data)
-          
+
         }, (error) => {
           console.log(error)
         })

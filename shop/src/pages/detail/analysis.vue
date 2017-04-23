@@ -10,7 +10,7 @@
                   购买数量：
               </div>
               <div class="sales-board-line-right">
-                <!-- <v-selection></v-selection> -->
+                <v-counter :counters="buyNum" @on-change="onParamChange('buyNum', $event)"></v-counter>
               </div>
           </div>
           <div class="sales-board-line">
@@ -18,7 +18,7 @@
                   产品类型：
               </div>
               <div class="sales-board-line-right">
-                <v-selection></v-selection>
+                  <v-selection :selections="buyTypes" @on-change="onParamChange('buyType', $event)"></v-selection>
               </div>
           </div>
           <div class="sales-board-line">
@@ -26,6 +26,9 @@
                   有效时间：
               </div>
               <div class="sales-board-line-right">
+                  <v-chooser
+                  :selections="periodList"
+                  @on-change="onParamChange('period', $event)"></v-chooser>
               </div>
           </div>
           <div class="sales-board-line">
@@ -33,6 +36,9 @@
                   产品版本：
               </div>
               <div class="sales-board-line-right">
+                  <!-- <v-mul-chooser
+                  :selections="versionList"
+                  @on-change="onParamChange('versions', $event)"></v-mul-chooser> -->
               </div>
           </div>
           <div class="sales-board-line">
@@ -40,12 +46,13 @@
                   总价：
               </div>
               <div class="sales-board-line-right">
+                  {{ price }} 元
               </div>
           </div>
           <div class="sales-board-line">
               <div class="sales-board-line-left">&nbsp;</div>
               <div class="sales-board-line-right">
-                  <div class="button" >
+                  <div class="button" @click="showPayDialog">
                     立即购买
                   </div>
               </div>
@@ -77,9 +84,83 @@
 </template>
 
 <script>
-import Vselection from '../../components/selection'
+import VSelection from '../../components/selection'
+import VChooser from '../../components/chooser'
+import VCounter from '../../components/counter'
 
+export default {
+  components: {
+    VSelection,
+    VChooser,
+    VCounter,
+  },
+  data () {
+    return {
+      buyNum: 3,
+      buyType: {},
+      versions: [],
+      period: {},
+      price: 0,
+      versionList: [
+        {
+          label: '客户版',
+          value: 0
+        },
+        {
+          label: '代理商版',
+          value: 1
+        },
+        {
+          label: '专家版',
+          value: 2
+        }
+      ],
+      periodList: [
+        {
+          label: '半年',
+          value: 0
+        },
+        {
+          label: '一年',
+          value: 1
+        },
+        {
+          label: '三年',
+          value: 2
+        }
+      ],
+      buyTypes: [
+        {
+          label: '入门版',
+          value: 0
+        },
+        {
+          label: '中级版',
+          value: 1
+        },
+        {
+          label: '高级版',
+          value: 2
+        }
+      ],
+      isShowPayDialog: false,
+      bankId: null,
+      orderId: null,
+      isShowCheckOrder: false,
+      isShowErrDialog: false
+    }
+  },
+  methods:{
+    onParamChange (attr, val) {
+      this[attr] = val
+      // this.getPrice()
+    },
+    showPayDialog (){
+      console.log(12132)
+    }
+  }
 
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
