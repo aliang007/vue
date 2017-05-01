@@ -18,7 +18,7 @@ export default {
     selections: {
       type: Array,
       default: [{
-        label: 'test',
+        label: '模板默认数据',
         value: 0
       }]
     }

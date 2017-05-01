@@ -36,9 +36,9 @@
                   产品版本：
               </div>
               <div class="sales-board-line-right">
-                  <!-- <v-mul-chooser
+                  <v-chooser
                   :selections="versionList"
-                  @on-change="onParamChange('versions', $event)"></v-mul-chooser> -->
+                  @on-change="onParamChange('versions', $event)"></v-chooser>
               </div>
           </div>
           <div class="sales-board-line">
@@ -87,6 +87,7 @@
 import VSelection from '../../components/selection'
 import VChooser from '../../components/chooser'
 import VCounter from '../../components/counter'
+import _ from 'lodash'
 
 export default {
   components: {
@@ -96,7 +97,7 @@ export default {
   },
   data () {
     return {
-      buyNum: 3,
+      buyNum: 0,
       buyType: {},
       versions: [],
       period: {},
@@ -153,11 +154,36 @@ export default {
   methods:{
     onParamChange (attr, val) {
       this[attr] = val
-      // this.getPrice()
+      console.log(attr,this[attr])
+      this.getPrice()
+    },
+    getPrice () {
+      let buyVersionsArray = _.map(this.versions, (item) => {
+        return item.value
+      })
+      console.log(buyVersionsArray)
+      let reqParams = {
+        buyNumber: this.buyNum,
+        buyType: this.buyType.value,
+        period: this.period.value,
+        version: buyVersionsArray.join(',')
+      }
+      this.$http.post('/api/getPrice', reqParams)
+      .then((res) => {
+        this.price = res.data.amount
+      })
     },
     showPayDialog (){
       console.log(12132)
     }
+
+  },
+  mounted(){
+    this.buyNum= 0
+    this.buyType= this.buyTypes[0]
+    this.versions= [this.versionList[0]]
+    this.period= this.periodList[0]
+    this.getPrice()
   }
 
 }
