@@ -11,7 +11,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      // component: Index
+      component: Index
     },
     {
       path: '/list',
