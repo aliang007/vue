@@ -1,20 +1,25 @@
 <template>
   <div id="app">
     <!-- 产品list -->
-    <h6 class='ui-txt-info'>年轻玩法，最in假期</h6>
+    
+    
     <div class="llh-classical-wrap">
-      <ul class="ui-list">
-        <List
-          v-for="item in product" :key="item.prodCode"
-          :prodCode="item.prodCode"
-          :prodName="item.prodName"
-          :thumb="item.thumb"
-          :label="item.label"
-          :minPrice="item.minPrice">
-        </List>
-      </ul>
-    </div>
-
+        <div class="llh-classical-hd">
+            <hgroup class="hgroup-wrap">
+                <h2>阿亮精心精选 </h2>
+            </hgroup>
+        </div>
+        <div class="llh-classical-bd">
+            <List
+              v-for="item in product" :key="item.prodCode"
+              :prodCode="item.prodCode"
+              :prodName="item.prodName"
+              :thumb="item.thumb"
+              :label="item.label"
+              :minPrice="item.minPrice">
+            </List>
+        </div>
+        </div>
   </div>
 </template>
 
