@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Header'
-import Detail from '@/pages/Detail'
+import Index from '../pages/index'
+import Detail from '../pages/Detail'
+import List from '../pages/List'
 
 Vue.use(Router)
 
@@ -10,10 +11,14 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Hello
+      // component: Index
     },
     {
-      path: '/detail/:color',
+      path: '/list',
+      component: List
+    },
+    {
+      path: '/detail',
       component:  Detail
     }
 
