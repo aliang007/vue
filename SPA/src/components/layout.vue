@@ -1,14 +1,15 @@
 <template>
   <div id="app">
     <!-- 头部 -->
-    <headr></headr>
+    <hd></hd>
     <router-view></router-view>
-
+    <ft></ft>
   </div>
 </template>
 
 <script>
-import Headr from '../components/Header'
+import hd from '../components/Header'
+import ft from '../components/Footer'
 import List from '../components/List'
 export default {
   data(){
@@ -26,7 +27,8 @@ export default {
     }
   },
   components: {
-    Headr,
+    hd,
+    ft,
     List
   }
 }
