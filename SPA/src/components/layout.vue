@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- 头部 -->
-    <hd></hd>
+    <hd>{{name}}</hd>
     <router-view></router-view>
     <ft></ft>
   </div>
@@ -14,16 +14,7 @@ import List from '../components/List'
 export default {
   data(){
     return {
-      name: "index",
-      product:[
-        {
-            "prodCode": "40119",
-            "prodName": "北京-长滩岛6天4晚自由行",
-            "thumb": "http://p.lailaihui.com/LineBigPhoto/4561/3.jpg",
-            "label": "良心路线",
-            "minPrice": 366900
-        }
-    ]
+      name: "index"
     }
   },
   components: {
