@@ -1,7 +1,7 @@
 <template>
-  <div class="header">
-      <h2>{{ title }}</h2>
-  </div>
+    <header class="ui-header ui-header-positive ui-border-b">
+        <i class="ui-icon-return" onclick="history.back()"></i><h1>{{title}}</h1>
+    </header>
 </template>
 
 <script>
@@ -17,5 +17,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.header{ line-height: 60px; text-align: center; margin-bottom: 20px; background: #fff; color: #000;}
+
 </style>

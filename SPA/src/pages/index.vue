@@ -9,14 +9,14 @@
     	    </ul>
     	</div>
 
-      <div class="llh-nav">
+        <div class="llh-nav">
   			<ul class="ui-row-flex">
   				<li class="ui-col ui-border"><span style="background-image:url(http://m.lailaihui.com/static/imgs/pic-index-1.png)"></span></li>
   				<li class="ui-col ui-border"><span style="background-image:url(http://m.lailaihui.com/static/imgs/pic-index-2.png)"></span></li>
   			</ul>
   		</div>
 
-      <div class="llh-hot-wrap">
+        <div class="llh-hot-wrap">
   			<div class="llh-hot-hd">
   				<span><i class="llh-icon-jishiqianggou"></i>爆款抢购</span>
   			</div>
@@ -68,21 +68,21 @@
 					 	<span><em>RMB </em><em>899</em><em> 起</em></span>
 					 </div>
 				</div>
-        <ul class="ui-list" id="classical-list">
-          <li onclick="window.location.href='/detail'" class="ui-border-b" v-for="product in otherPrds">
-        	    <div class="ui-list-img">
-        	        <span :style="{backgroundImage: 'url('+product.thumb+')'}"></span>
-        	        <div class="ui-badge">{{product.label}}</div>
-        	    </div>
-              <div class="ui-list-info">
-               <div>
-                   <h6 class="ui-nowrap">{{product.prodName}}</h6>
-                   <p class="llh-classical-time">2015年5-6月多团期出发</p>
-                 </div>
-                 <p class="ui-txt-highlight llh-txt-xl"><span class="llh-txt-s">RNB </span> {{product.minPrice/100}} <span class="llh-txt-s"> 元起</span></p>
-             </div>
-        	</li>
-        </ul>
+                <ul class="ui-list" id="classical-list">
+                    <li onclick="window.location.href='/detail'" class="ui-border-b" v-for="product in otherPrds">
+                	    <div class="ui-list-img">
+                	        <span :style="{backgroundImage: 'url('+product.thumb+')'}"></span>
+                	        <div class="ui-badge">{{product.label}}</div>
+                	    </div>
+                        <div class="ui-list-info">
+                            <div>
+                               <h6 class="ui-nowrap">{{product.prodName}}</h6>
+                               <p class="llh-classical-time">2015年5-6月多团期出发</p>
+                            </div>
+                             <p class="ui-txt-highlight llh-txt-xl"><span class="llh-txt-s">RNB </span> {{product.minPrice/100}} <span class="llh-txt-s"> 元起</span></p>
+                        </div>
+                	</li>
+                </ul>
 				<a href="/list" class="ui-txt-info" id="classical-load-btn">更多经典线路</a>
 			</div>
 		</div>
@@ -192,7 +192,7 @@ export default {
 </script>
 
 <style scoped>
-  @import 'http://m.lailaihui.com/static/css/lib/frozen.css';
+
   @import 'http://m.lailaihui.com/static/css/index.css';
-.ttc { text-align:center; line-height:50px; font-size:40px;}
+
 </style>

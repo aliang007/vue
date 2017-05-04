@@ -26,9 +26,6 @@ export default {
 </script>
 
 <style>
-*{margin:0;padding:0;}
-body{background:#e3e9f2;font-family:微软雅黑;font-size:12px;}
-img{display:block;width:100%;}
-a{text-decoration:none;}
-li{list-style:none;}
+@import 'http://m.lailaihui.com/static/css/lib/frozen.css';
+#ui-container{margin-top: 0!important;}
 </style>
