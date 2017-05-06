@@ -1,5 +1,5 @@
 <template>
-  <section class="ui-container" id='ui-container'>
+  <section class="index">
 
       <div class="ui-slider llh-ui-slider">
     	    <ul class="ui-slider-content" style="width: 300%;transform: translate(-0px, 0px) translateZ(0px);">

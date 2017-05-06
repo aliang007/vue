@@ -1,24 +1,24 @@
 <template>
-  <div id="app">
-    <!-- 产品list -->
-    <div class="llh-classical-wrap">
-        <div class="llh-classical-hd">
-            <hgroup class="hgroup-wrap">
-                <h2>阿亮-精心精选 </h2>
-            </hgroup>
+    <section class="list">
+        <!-- 产品list -->
+        <div class="llh-classical-wrap">
+            <div class="llh-classical-hd">
+                <hgroup class="hgroup-wrap">
+                    <h2>阿亮-精心精选 </h2>
+                </hgroup>
+            </div>
+            <div class="llh-classical-bd">
+                <List
+                  v-for="item in product" :key="item.prodCode"
+                  :prodCode="item.prodCode"
+                  :prodName="item.prodName"
+                  :thumb="item.thumb"
+                  :label="item.label"
+                  :minPrice="item.minPrice">
+                </List>
+            </div>
         </div>
-        <div class="llh-classical-bd">
-            <List
-              v-for="item in product" :key="item.prodCode"
-              :prodCode="item.prodCode"
-              :prodName="item.prodName"
-              :thumb="item.thumb"
-              :label="item.label"
-              :minPrice="item.minPrice">
-            </List>
-        </div>
-        </div>
-  </div>
+    </section>
 </template>
 
 <script>

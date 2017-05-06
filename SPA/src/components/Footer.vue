@@ -1,9 +1,8 @@
 <template>
-  <div class="header">
-      <h2>{{ title }}</h2>
-  </div>
+    <footer class="ui-footer">
+        底部
+    </footer>
 </template>
-
 <script>
 export default {
   name: 'hello',
@@ -17,5 +16,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.header{ line-height: 60px; text-align: center; margin-bottom: 20px; background: #fff; color: #000;}
+
 </style>

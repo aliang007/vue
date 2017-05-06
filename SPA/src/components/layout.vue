@@ -2,7 +2,9 @@
   <div id="app">
     <!-- 头部 -->
     <hd>{{name}}</hd>
-    <router-view></router-view>
+    <section class="ui-container">
+        <router-view></router-view>
+    </section>
     <ft></ft>
   </div>
 </template>
@@ -27,5 +29,7 @@ export default {
 
 <style>
 @import 'http://m.lailaihui.com/static/css/lib/frozen.css';
-#ui-container{margin-top: 0!important;}
+.ui-container{
+    margin-top: 45px;
+}
 </style>

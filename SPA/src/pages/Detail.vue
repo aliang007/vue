@@ -1,7 +1,7 @@
 
 <!-- Detail.vue -->
 <template>
-    <section class="ui-container" id='ui-container'>
+    <section class="detail">
     	<div class="ui-slider llh-ui-slider">
     	    <ul class="ui-slider-content" style="width: 100%;transform: translate(-0px, 0px) translateZ(0px);">
     	        <li class="current"><span style="background-image:url(https://img.alicdn.com/tps/TB1vg9.KVXXXXaWXVXXXXXXXXXX-1125-352.jpg_q50.jpg)"></span></li>
